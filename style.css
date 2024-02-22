@@ -29,10 +29,41 @@ body{
  display: flex;
 }
 
+/* INIZIO SEZIONE DEI PROFILI (PARTE SINISTRA)*/
 #profiles{
  width: calc(100% / 3);
  background-color: lightpink;
 }
+.top-section{
+ 
+}
+.user-profile{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+/* box che contiene immagine di profilo e nome utente princpale*/
+.user-profile div:nth-child(1){
+display: flex;
+align-items: center;
+gap:5px;
+}
+
+/* immagine profilo dell'utente principale*/
+.user-profile div:nth-child(1) img{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+/* FINE SEZIONE DEI PROFILI (PARTE SINISTRA)*/
+
+
+
+
+
 
 #chats{
 flex-grow: 1;
