@@ -38,6 +38,7 @@ body{
  
 }
 .user-profile{
+padding: 0 10px;
  display: flex;
  justify-content: space-between;
  align-items: center;
@@ -56,6 +57,18 @@ gap:5px;
     height: auto;
     border-radius: 50%;
 }
+
+.user-profile div:nth-child(2){
+    display: flex;
+    gap:15px;
+}
+
+.user-profile div:nth-child(2) i {
+    font-size: 20px;
+    color: gray;
+
+}
+
 
 
 /* FINE SEZIONE DEI PROFILI (PARTE SINISTRA)*/
