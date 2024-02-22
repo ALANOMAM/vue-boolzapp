@@ -128,14 +128,14 @@
 <!--chat nav end-->
 
 <!--chat body start-->
-    <div class="chat-body">
+    <div v-for="mes in contacts"  class="chat-body">
 
      <div class="utente">
-     messaggio utente
+     {{mes.messages[0].message }}
      </div>
 
      <div class="interlocutore">
-        messaggio interlocutore
+        {{mes.messages[1].message }}
      </div> 
 
     </div>
