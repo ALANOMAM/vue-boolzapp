@@ -2,9 +2,29 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border:1px black solid;
 }
 
 
 body{
     background-color: blanchedalmond;
+}
+
+#chat-box{
+ max-width: 1200px;
+ margin-left: auto;
+ margin-right: auto;
+ height: 400px;/*test*/
+
+ display: flex;
+}
+
+#profiles{
+ width: calc(100% / 3);
+ background-color: lightpink;
+}
+
+#chats{
+flex-grow: 1;
+background-color: lightskyblue;
 }
