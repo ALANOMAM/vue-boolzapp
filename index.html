@@ -73,11 +73,11 @@
 
 
  <!--friend profile start-->
- <div class="friend-profile">
+ <div v-for="contact in contacts" class="friend-profile">
     <div class="image-description">
-  <img src="img/avatar_1.jpg" alt="immagine-amico">
+  <img :src="contact.avatar" alt="immagine-amico">
     <div>
-   <span>Michele</span>
+   <span>{{contact.name}}</span>
    <span>Ultimo messaggio inviato</span>
    </div>
     </div>
@@ -88,125 +88,8 @@
 
     </div>
   <!--friend profile end-->
-
-  <!--friend profile start-->
- <div class="friend-profile">
-    <div class="image-description">
-  <img src="img/avatar_1.jpg" alt="immagine-amico">
-    <div>
-   <span>Michele</span>
-   <span>Ultimo messaggio inviato</span>
-   </div>
-    </div>
-
-    <span>
-     12:00
-    </span>
-
-    </div>
-  <!--friend profile end-->
-
-  <!--friend profile start-->
- <div class="friend-profile">
-    <div class="image-description">
-  <img src="img/avatar_1.jpg" alt="immagine-amico">
-    <div>
-   <span>Michele</span>
-   <span>Ultimo messaggio inviato</span>
-   </div>
-    </div>
-
-    <span>
-     12:00
-    </span>
-
-    </div>
-  <!--friend profile end-->
-
-  <!--friend profile start-->
- <div class="friend-profile">
-    <div class="image-description">
-  <img src="img/avatar_1.jpg" alt="immagine-amico">
-    <div>
-   <span>Michele</span>
-   <span>Ultimo messaggio inviato</span>
-   </div>
-    </div>
-
-    <span>
-     12:00
-    </span>
-
-    </div>
-  <!--friend profile end-->
-
-  <!--friend profile start-->
- <div class="friend-profile">
-    <div class="image-description">
-  <img src="img/avatar_1.jpg" alt="immagine-amico">
-    <div>
-   <span>Michele</span>
-   <span>Ultimo messaggio inviato</span>
-   </div>
-    </div>
-
-    <span>
-     12:00
-    </span>
-
-    </div>
-  <!--friend profile end-->
-
-  <!--friend profile start-->
- <div class="friend-profile">
-    <div class="image-description">
-  <img src="img/avatar_1.jpg" alt="immagine-amico">
-    <div>
-   <span>Michele</span>
-   <span>Ultimo messaggio inviato</span>
-   </div>
-    </div>
-
-    <span>
-     12:00
-    </span>
-
-    </div>
-  <!--friend profile end-->
-
-  <!--friend profile start-->
- <div class="friend-profile">
-    <div class="image-description">
-  <img src="img/avatar_1.jpg" alt="immagine-amico">
-    <div>
-   <span>Michele</span>
-   <span>Ultimo messaggio inviato</span>
-   </div>
-    </div>
-
-    <span>
-     12:00
-    </span>
-
-    </div>
-  <!--friend profile end-->
-
-  <!--friend profile start-->
- <div class="friend-profile">
-    <div class="image-description">
-  <img src="img/avatar_1.jpg" alt="immagine-amico">
-    <div>
-   <span>Michele</span>
-   <span>Ultimo messaggio inviato</span>
-   </div>
-    </div>
-
-    <span>
-     12:00
-    </span>
-
-    </div>
-  <!--friend profile end-->
+ 
+  
  </div>
 <!--middle-bottom-section fine-->
  </div>
