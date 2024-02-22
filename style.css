@@ -157,10 +157,12 @@ gap:10px;
 /* INIZIO SEZIONE DELLE  CHAT (PARTE DESTRA)*/
 
 #chats{
+padding-right: 10px;
 flex-grow: 1;
-background-color: lightskyblue;
+background-color:rgba(241, 241, 241, 1);
 display: flex;
 flex-direction: column;
+
 }
 
 .chat-nav{
@@ -168,10 +170,27 @@ flex-direction: column;
    height: calc(100%/10); /*test*/
 }
 
+.chat-options{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chat-options i {
+color: gray;
+font-size: 20px;
+}
+
+/*----------------------------------------*/
+
+
+
 .chat-body{
 background-color: bisque;
 height: calc(100%); /*test*/
 }
+
+/*----------------------------------------*/
 
 .chat-footer{
   background-color: brown;
