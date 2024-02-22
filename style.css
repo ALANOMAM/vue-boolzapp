@@ -14,7 +14,7 @@ body{
     background-color: rgba(216, 219, 214, 1)
 }
 
-.container{
+.contenitore{
     position: absolute;
     top:20px;
     width: 100%;
@@ -154,11 +154,29 @@ gap:10px;
 /* FINE SEZIONE DEI PROFILI (PARTE SINISTRA)*/
 
 
-
-
-
+/* INIZIO SEZIONE DELLE  CHAT (PARTE DESTRA)*/
 
 #chats{
 flex-grow: 1;
 background-color: lightskyblue;
+display: flex;
+flex-direction: column;
 }
+
+.chat-nav{
+   background-color: pink; 
+   height: calc(100%/10); /*test*/
+}
+
+.chat-body{
+background-color: bisque;
+height: calc(100%); /*test*/
+}
+
+.chat-footer{
+  background-color: brown;
+  height: calc(100%/10); /*test*/
+  
+}
+
+/* FINE SEZIONE DELLE  CHAT (PARTE DESTRA)*/
