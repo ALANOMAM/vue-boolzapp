@@ -5,16 +5,26 @@
     border:1px black solid;
 }
 
+#background-nav{
+    height: 150px;/*test*/
+    background-color: rgba(0, 150, 136, 1);
+}
 
 body{
-    background-color: blanchedalmond;
+    background-color: rgba(216, 219, 214, 1)
+}
+
+.container{
+    position: absolute;
+    top:20px;
+    width: 100%;
 }
 
 #chat-box{
  max-width: 1200px;
  margin-left: auto;
  margin-right: auto;
- height: 400px;/*test*/
+ height: 640px;/*test*/
 
  display: flex;
 }
