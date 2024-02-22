@@ -186,7 +186,7 @@ font-size: 20px;
 
 
 .chat-body{
-background-color: bisque;
+background-image: url("img/mine.jpg");
 height: calc(100%); /*test*/
 }
 
