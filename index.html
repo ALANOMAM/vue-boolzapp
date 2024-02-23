@@ -73,7 +73,7 @@
 
 
  <!--friend profile start-->
- <div v-for="(contact,cIndex ) in contacts" @click="mostra(cIndex)"  class="friend-profile">
+ <div v-for="(contact,cIndex ) in contacts" @click="activeConversation(cIndex)"  class="friend-profile">
     <div class="image-description">
   <img :src="contact.avatar"  alt="immagine">
     <div>
@@ -106,7 +106,7 @@
     <div class="chat-nav">
 
             <!--friend profile start-->
- <div class="nav-friend-profile" v-for="(mes, mIndex) in contacts" v-show="mIndex == messageIndex" >
+ <div class="nav-friend-profile" v-for="(mes, mIndex) in contacts" v-show="mIndex == activeContactIndex" >
     <div class="image-description">
   <img :src="mes.avatar" alt="immagine-amico">
     <div>
@@ -128,15 +128,14 @@
 <!--chat nav end-->
 
 <!--chat body start-->
-    <div v-for="(mes, mIndex) in contacts" v-show="mIndex == messageIndex"  class="chat-body">
+  <div class="chat-body" v-for="mes in contacts[activeContactIndex].messages">
 
-     <div class="utente">
-     {{mes.messages[0].message }}
-     </div>
-
-     <div class="interlocutore">
-        {{mes.messages[1].message }}
-     </div> 
+    <div class="conversazione" :class="mes.status == 'sent'? 'interlocutore': 'utente' " >
+     {{mes.message}}
+    <div class="tempo">
+        {{mes.date }}
+    </div>
+    </div>
 
     </div>
 <!--chat body end-->

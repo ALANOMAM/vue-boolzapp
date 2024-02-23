@@ -124,9 +124,11 @@ background-color: rgba(142, 218, 252, 1);
 }
 
 .friend-profile{
-     padding-top: 10px;
+     /*padding-top: 10px;
      padding-bottom: 10px;
      padding-left: 10px;
+     padding-right: 10px;*/
+    padding:10px;
     display: flex;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 1);
@@ -181,9 +183,11 @@ flex-direction: column;
 
 .nav-friend-profile{
     background-color:rgba(234, 234, 234, 1) ;
-    padding-top: 10px;
+    /*padding-top: 10px;
      padding-bottom: 10px;
      padding-left: 10px;
+     padding-right: 10px;*/
+     padding: 10px;
     display: flex;
     justify-content: space-between;
     border-bottom:1px gray solid;
@@ -211,7 +215,7 @@ font-size: 20px;
 
 
 .chat-body{
-height: calc(100%); /*test*/
+ height: calc(100%); /*test*/
 padding: 40px;
 display: flex;
 background-image: url("img/mine.jpg");
@@ -219,11 +223,19 @@ flex-direction: column;
 gap: 20px;
 }
 
-.chat-body div{
+
+.conversazione{
     width: calc(100%/4);
     height: auto;
     padding: 10px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;   
+}
+
+.tempo{
+    align-self: flex-end;
+    color: gray;
 }
 
 .utente{

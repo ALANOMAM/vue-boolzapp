@@ -6,7 +6,7 @@ createApp({
     data() {
         return {
 
-            messageIndex:0,
+            activeContactIndex:0,
              /*contacts start*/
             
      
@@ -198,9 +198,9 @@ contacts: [
 
 methods:{
 
-    mostra(cIndex){
+    activeConversation(cIndex){
         // console.log(cIndex)
-        this.messageIndex = cIndex
+        this.activeContactIndex = cIndex
     }
 }
     
