@@ -5,10 +5,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-
-            activeContactIndex:0,
              /*contacts start*/
-            
      
 contacts: [
     /*michele start*/
@@ -187,12 +184,17 @@ contacts: [
             }
         ],
     }
-]
-
-
-
-              
+],
+     
           /*contacts end*/
+
+          activeContactIndex:0,
+          
+
+          newMessage:{
+            message: '',
+            status: 'sent'
+          }
 
         }},
 
@@ -201,7 +203,17 @@ methods:{
     activeConversation(cIndex){
         // console.log(cIndex)
         this.activeContactIndex = cIndex
+    },
+
+    aggiungiElemento(){
+        if(this.newMessage.message.trim() != ""){
+      this.contacts[0].messages.push({...this.newMessage})
+       //console.log(this.newMessages)
+        }
+      
     }
+
+
 }
     
    
