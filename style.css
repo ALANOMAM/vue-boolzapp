@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /*border:1px black solid;*/
+     /*border:1px black solid;*/
 }
 
 #background-nav{
@@ -11,6 +11,7 @@
 }
 
 body{
+    font-family: sans-serif;
     background-color: rgba(216, 219, 214, 1)
 }
 
@@ -18,27 +19,27 @@ body{
     position: absolute;
     top:20px;
     width: 100%;
+
 }
 
 #chat-box{
  max-width: 1200px;
  margin-left: auto;
  margin-right: auto;
- height: 800px;/*test*/
-
+ height: 100vh; /*test*/
  display: flex;
 }
 
 /* INIZIO SEZIONE DEI PROFILI (PARTE SINISTRA)*/
 #profiles{
  width: calc(100% / 3);
- background-color: rgba(241, 241, 241, 1)
+height: 100vh;/*test*/
+overflow-y: auto;
+background-color: rgba(241, 241, 241, 1);
 }
-.top-section{
- 
-}
+
 .user-profile{
-padding: 0 10px;
+padding: 10px 10px;
  display: flex;
  justify-content: space-between;
  align-items: center;
@@ -103,9 +104,13 @@ background-color: rgba(142, 218, 252, 1);
     padding:  0 10px;
 }
 
+.search-bar button{
+    border: 1px solid rgba(241, 241, 241, 1);
+}
+
 .search-bar i{
     font-size: 20px;
-    padding: 7px;
+    padding: 8px;
     color: gray;
     background-color: white;
 }
@@ -115,12 +120,15 @@ background-color: rgba(142, 218, 252, 1);
     margin-bottom: 5px;
     padding: 10px;
     width: 100%;
-    border-color: whitesmoke;
+    border: 1px solid rgba(241, 241, 241, 1);
 }
 
 /*---------------------*/
 .middle-bottom-section{
+    height: 455px;/*test*/
+    overflow-y: auto;
     padding-right:10px;
+
 }
 
 .friend-profile{
@@ -212,15 +220,16 @@ font-size: 20px;
 
 /*----------------------------------------*/
 
-
-
 .chat-body{
- height: calc(100%); /*test*/
-padding: 40px;
+    height: calc(100%); /*test*/ 
+    overflow-y: auto;
+    background-image: url("img/mine.jpg");
+}
+
+.chat-element{
+ padding: 10px;
 display: flex;
-background-image: url("img/mine.jpg");
  flex-direction: column;
-gap: 20px;
 }
 
 
@@ -252,10 +261,16 @@ align-self: self-end;
 .chat-footer{
    /*background-color: brown;*/
   height: calc(100%/10); /*test*/
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   
+}
+
+.chat-footer button{
+    border: 1px solid rgba(241, 241, 241, 1);
 }
 
 .chat-footer i{
@@ -267,6 +282,8 @@ align-self: self-end;
 .chat-footer input{
     padding: 15px;
     width: 100%;
+    border: 1px solid rgba(241, 241, 241, 1);
+    font-size: 20px;
 }
 
 /* FINE SEZIONE DELLE  CHAT (PARTE DESTRA)*/

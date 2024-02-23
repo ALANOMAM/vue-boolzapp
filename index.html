@@ -61,7 +61,7 @@
 
   <!--sezione searchbar start-->
   <div class="search-bar">
-    <label for="searches"> <i class="fa-solid fa-magnifying-glass"></i> </label>
+    <button type="button"> <i class="fa-solid fa-magnifying-glass"></i> </button>
     <input type="search" id="searches" placeholder="Cerca o inizia una nuova chat">
   </div>
   <!--sezione searchbar end-->
@@ -128,7 +128,8 @@
 <!--chat nav end-->
 
 <!--chat body start-->
-  <div class="chat-body" v-for="mes in contacts[activeContactIndex].messages">
+  <div class="chat-body">
+  <div class="chat-element" v-for="mes in contacts[activeContactIndex].messages">
 
     <div class="conversazione" :class="mes.status == 'sent'? 'sent-by-me': 'sent-by-friend' " >
      {{mes.message}}
@@ -138,13 +139,19 @@
     </div>
 
     </div>
+    </div>
 <!--chat body end-->
 
 <!--chat footer start-->
     <div class="chat-footer">
-     <i class="fa-regular fa-face-smile"></i>
+        <button type="button" >
+            <i class="fa-regular fa-face-smile"></i>
+        </button>
     <input type="text" placeholder="Scrivi un messaggio"  v-model="newMessage.message"  @keyup.enter="aggiungiElemento()">    
-    <i class="fa-solid fa-microphone"></i>
+     <button type="button">
+        <i class="fa-solid fa-microphone"></i>
+     </button>
+   
     </div>
 <!--chat footer end-->    
 
