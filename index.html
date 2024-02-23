@@ -73,9 +73,9 @@
 
 
  <!--friend profile start-->
- <div v-for="contact in contacts" class="friend-profile">
+ <div v-for="(contact,cIndex ) in contacts" @click="mostra(cIndex)"  class="friend-profile">
     <div class="image-description">
-  <img :src="contact.avatar" alt="immagine-amico">
+  <img :src="contact.avatar"  alt="immagine">
     <div>
    <span>{{contact.name}}</span>
    <span>Ultimo messaggio inviato</span>
@@ -106,11 +106,11 @@
     <div class="chat-nav">
 
             <!--friend profile start-->
- <div class="friend-profile nav-friend-profile">
+ <div class="nav-friend-profile" v-for="(mes, mIndex) in contacts" v-show="mIndex == messageIndex" >
     <div class="image-description">
-  <img src="img/avatar_1.jpg" alt="immagine-amico">
+  <img :src="mes.avatar" alt="immagine-amico">
     <div>
-   <span>Michele</span>
+   <span>{{mes.name}}</span>
    <span>Ultimo accesso alle 12:30</span>
    </div>
     </div>
@@ -128,7 +128,7 @@
 <!--chat nav end-->
 
 <!--chat body start-->
-    <div v-for="mes in contacts"  class="chat-body">
+    <div v-for="(mes, mIndex) in contacts" v-show="mIndex == messageIndex"  class="chat-body">
 
      <div class="utente">
      {{mes.messages[0].message }}

@@ -5,6 +5,8 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+
+            messageIndex:0,
              /*contacts start*/
             
      
@@ -192,9 +194,15 @@ contacts: [
               
           /*contacts end*/
 
-        }}
+        }},
 
+methods:{
 
+    mostra(cIndex){
+        // console.log(cIndex)
+        this.messageIndex = cIndex
+    }
+}
     
    
 
