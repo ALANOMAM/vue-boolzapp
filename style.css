@@ -238,12 +238,12 @@ gap: 20px;
     color: gray;
 }
 
-.utente{
+.sent-by-me{
 align-self: self-end;
  background-color: rgba(213, 249, 186, 1);
 }
 
-.interlocutore{
+.sent-by-friend{
   background-color: white;
 }
 

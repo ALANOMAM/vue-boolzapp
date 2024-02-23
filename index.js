@@ -185,40 +185,58 @@ contacts: [
         ],
     }
 ],
-     
-          /*contacts end*/
+/*contacts end*/
+
 
           activeContactIndex:0,
-          
-
+         
+         //oggetto che rappresenta il messaggio che aggiungo io
           newMessage:{
+            date: '26/02/2024 15:51:00' ,
             message: '',
             status: 'sent'
+          },
+
+          // oggetto che rappresenta il messaggio che si aggiunge automaticamente
+          newAutoMessage:{
+            date: '26/02/2024 15:51:00' ,
+            message: 'ok',
+            status: 'received'
           }
 
+      
+          
         }},
 
 methods:{
-
+     
+    //metodo che collega i profili alle loro chat rispettive
     activeConversation(cIndex){
         // console.log(cIndex)
         this.activeContactIndex = cIndex
     },
 
+   // metodo che aggiunge il mio nuovo messaggio facendo partire anche il timer per la riposta
     aggiungiElemento(){
         if(this.newMessage.message.trim() != ""){
-      this.contacts[0].messages.push({...this.newMessage})
-       //console.log(this.newMessages)
+      this.contacts[this.activeContactIndex].messages.push({...this.newMessage}) 
         }
       
+        setTimeout(this.aggiungiElementoAuto , 1000)
+    },
+
+    
+    // metodo che aggiunge  la risposta dopo il mio messaggio
+    aggiungiElementoAuto(){
+        if(this.newMessage.message.trim() != ""){
+        this.contacts[this.activeContactIndex].messages.push({...this.newAutoMessage})
+        }
     }
+
 
 
 }
     
-   
-
-
      /*mounted() {
         
 
