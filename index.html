@@ -61,8 +61,8 @@
 
   <!--sezione searchbar start-->
   <div class="search-bar">
-    <button type="button"> <i class="fa-solid fa-magnifying-glass"></i> </button>
-    <input type="search" id="searches" placeholder="Cerca o inizia una nuova chat">
+    <button type="button" @click="print()"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+    <input type="search" id="searches" placeholder="Cerca o inizia una nuova chat" @keyup.enter="print()" v-model="friendName">
   </div>
   <!--sezione searchbar end-->
   </div>
@@ -82,7 +82,7 @@
    </div>
     </div>
 
-    <span>
+    <span @click="indexName(cIndex)">
      12:00
     </span>
 

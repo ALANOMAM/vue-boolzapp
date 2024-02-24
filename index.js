@@ -188,7 +188,7 @@ contacts: [
 /*contacts end*/
 
 
-          activeContactIndex:0,
+          activeContactIndex:1,
          
          //oggetto che rappresenta il messaggio che aggiungo io
           newMessage:{
@@ -202,13 +202,67 @@ contacts: [
             date: '26/02/2024 15:51:00' ,
             message: 'ok',
             status: 'received'
-          }
+          },
 
+          //il nome che inserisco nella search bar
+          friendName:'',
+          //array del nome che inserisco nella search bar
+          friendNameArray:[],
+          //array del nome del contatto gia presente nelle chat 
+          friendNameArray2:[]
       
           
         }},
 
 methods:{
+
+
+
+    //nome legato ad un indice specifico
+    indexName(cIndex){
+        for(let i = 0; i<this.contacts[cIndex].name.length; i++){
+            this.friendNameArray2.push(this.contacts[cIndex].name[i])    
+            
+       }
+     
+       console.log(this.friendNameArray2)
+       //questo commando evita che quando clicco un nome diverso si aggiunge al nome gia presente in array,
+       // mi fa ripartire da un array vuoto ogni giro insomma
+       // this.friendNameArray2 = []
+
+     },
+
+
+
+    // mi stanpa fuori un array con le lettere della parola inserita
+    print(){
+    for(let i = 0; i<this.friendName.length; i++){
+         this.friendNameArray.push(this.friendName[i])   
+            
+    }
+     console.log(this.friendNameArray.join('')) 
+
+     
+      this.contacts.filter( (currentContact) =>{ 
+
+      if(this.friendNameArray.join('') ===  currentContact.name /*this.friendNameArray2.join('')*/ ){
+        console.log("combacia con ",currentContact.name )
+      }
+
+    })
+
+
+    
+
+     //questo commando evita che quando clicco un nome diverso si aggiunge al nome gia presente in array,
+    // mi fa ripartire da un array vuoto ogni giro insomma
+      this.friendNameArray=[]
+
+    },
+
+
+     
+
      
     //metodo che collega i profili alle loro chat rispettive
     activeConversation(cIndex){
