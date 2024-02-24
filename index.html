@@ -73,7 +73,7 @@
 
 
  <!--friend profile start-->
- <div v-for="(contact,cIndex ) in contacts" @click="activeConversation(cIndex)"  class="friend-profile">
+ <div v-for="(contact,cIndex ) in contacts" @click="activeConversation(cIndex)"  class="friend-profile" :class="friendName.includes(...contact.name) ? '' : 'dont-display-contact' "   >
     <div class="image-description">
   <img :src="contact.avatar"  alt="immagine">
     <div>

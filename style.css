@@ -170,6 +170,11 @@ gap:10px;
     gap:5px;
 }
 
+
+.dont-display-contact{
+    display: none;
+}
+
 /* FINE SEZIONE DEI PROFILI (PARTE SINISTRA)*/
 
 

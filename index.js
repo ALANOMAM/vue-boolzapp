@@ -207,9 +207,9 @@ contacts: [
           //il nome che inserisco nella search bar
           friendName:'',
           //array del nome che inserisco nella search bar
-          friendNameArray:[],
+          // friendNameArray:[],
           //array del nome del contatto gia presente nelle chat 
-          friendNameArray2:[]
+          //friendNameArray2:[]
       
           
         }},
@@ -219,7 +219,7 @@ methods:{
 
 
     //nome legato ad un indice specifico
-    indexName(cIndex){
+    /* indexName(cIndex){
         for(let i = 0; i<this.contacts[cIndex].name.length; i++){
             this.friendNameArray2.push(this.contacts[cIndex].name[i])    
             
@@ -230,12 +230,12 @@ methods:{
        // mi fa ripartire da un array vuoto ogni giro insomma
        // this.friendNameArray2 = []
 
-     },
+     },*/
 
 
 
     // mi stanpa fuori un array con le lettere della parola inserita
-    print(){
+    /*print(){
     for(let i = 0; i<this.friendName.length; i++){
          this.friendNameArray.push(this.friendName[i])   
             
@@ -243,23 +243,21 @@ methods:{
      console.log(this.friendNameArray.join('')) 
 
      
-      this.contacts.filter( (currentContact) =>{ 
+      this.contacts.forEach( (currentContact) =>{ 
 
-      if(this.friendNameArray.join('') ===  currentContact.name /*this.friendNameArray2.join('')*/ ){
+      if(this.friendNameArray.join('') ===  currentContact.name  ){
         console.log("combacia con ",currentContact.name )
+    
       }
 
     })
-
-
-    
 
      //questo commando evita che quando clicco un nome diverso si aggiunge al nome gia presente in array,
     // mi fa ripartire da un array vuoto ogni giro insomma
       this.friendNameArray=[]
 
-    },
-
+    
+    }, */
 
      
 
