@@ -11,14 +11,14 @@
     <!--style-->
     <link rel="stylesheet" href="style.css">
 </head>
-  <body class="body-dark">
+  <body  :class = "isDark == false ? 'body-dark' : '' " >
    <!-- vue -->
    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
    <!-- axios -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script> -->
 
 
-  <div class="background-nav  body-nav-dark" >
+  <div class="background-nav "  :class="isDark == true ? ' body-nav-dark' : '' ">
  
   </div>
 
@@ -29,7 +29,7 @@
  <div id="chat-box" >
 
  <!--sezione profili inizio-->   
- <div class="profiles profiles-dark">
+ <div class="profiles" :class="isDark == true ? 'profiles-dark' : '' ">
    
   <!--top section inizio-->  
  <div class="top-section">
@@ -37,7 +37,7 @@
   <div class="user-profile">
     <div>
   <img src="img/avatar_io.jpg" alt="immagine-utente">
-   <span class="sofia-dark">Sofia</span>
+   <span  :class="isDark == true ? 'sofia-dark' : '' ">Sofia</span>
     </div>
 
     <div>
@@ -73,7 +73,7 @@
 
 
  <!--friend profile start-->
- <div v-for="(contact,cIndex ) in contacts" @click="activeConversation(cIndex)"  class="friend-profile friend-profile-dark" :class="friendName.includes(...contact.name) ? '' : 'dont-display-contact' "   >
+ <div v-for="(contact,cIndex ) in contacts" @click="activeConversation(cIndex)"  class="friend-profile"    :class="friendName.includes(...contact.name) ? '' : 'dont-display-contact' "   >
     <div class="image-description">
   <img :src="contact.avatar"  alt="immagine">
     <div>
@@ -100,13 +100,13 @@
 
 
  <!--sezione chats inizio-->  
- <div class="chats chats-dark">
+ <div class="chats" :class="isDark == true ? 'chats-dark' : '' ">
 
   <!--chat nav start-->
     <div class="chat-nav">
 
             <!--friend profile start-->
- <div class="nav-friend-profile nav-friend-profile-dark" v-for="(mes, mIndex) in contacts" v-show="mIndex == activeContactIndex" >
+ <div class="nav-friend-profile" :class="isDark == true ? 'nav-friend-profile-dark' : '' " v-for="(mes, mIndex) in contacts" v-show="mIndex == activeContactIndex" >
     <div class="image-description">
   <img :src="mes.avatar" alt="immagine-amico">
     <div>
@@ -116,7 +116,8 @@
     </div>
 
     <div class="chat-options">
-      <i class="fa-solid fa-circle-half-stroke"></i>
+      <!--l'icona che mi permette di cambiare modlità in light o dark-->
+      <i class="fa-solid fa-circle-half-stroke" @click="cambioMode()"></i>
       <i class="fa-solid fa-magnifying-glass"></i>  
       <i class="fa-solid fa-paperclip"></i>
       <i class="fa-solid fa-ellipsis-vertical"></i>       
@@ -129,7 +130,7 @@
 <!--chat nav end-->
 
 <!--chat body start-->
-  <div class="chat-body chat-body-dark">
+  <div class="chat-body" :class="isDark == true ? 'chat-body-dark' : '' ">
   <div class="chat-element" v-for="mes in contacts[activeContactIndex].messages">
 
     <div class="conversazione" :class="mes.status == 'sent'? 'sent-by-me': 'sent-by-friend' " >

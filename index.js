@@ -206,6 +206,9 @@ contacts: [
 
           //il nome che inserisco nella search bar
           friendName:'',
+          //la variabile che controlla il darkmode
+          isDark:false,
+
           //array del nome che inserisco nella search bar
           // friendNameArray:[],
           //array del nome del contatto gia presente nelle chat 
@@ -216,7 +219,10 @@ contacts: [
 
 methods:{
 
-
+    //funzione che mi cambia il mode della pagina quando clicco
+    cambioMode(){
+       this.isDark =! this.isDark
+    },
 
     //nome legato ad un indice specifico
     /* indexName(cIndex){

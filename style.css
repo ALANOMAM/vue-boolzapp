@@ -296,11 +296,13 @@ align-self: self-end;
 /*STILIZZAZIONE DARKMODE INIZIO*/
 
 .body-dark{
-  background-color: gray;
+  /*background-color: gray;*/
+  background-color: pink;
 }
 
 .body-nav-dark{
-    background-color:darkgreen; 
+   /* background-color:darkgreen; */
+   background-color: red;
 }
 
 .profiles-dark{
@@ -321,10 +323,10 @@ align-self: self-end;
     color: white;
 }
 
-.friend-profile-dark{
+/*.friend-profile-dark{
  background-color:rgba(23, 99, 23, 0.728);
  color: white;
-}
+}*/
 
  /*.chat-body-dark{
     background-color: darkmagenta;
