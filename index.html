@@ -11,25 +11,25 @@
     <!--style-->
     <link rel="stylesheet" href="style.css">
 </head>
-  <body>
+  <body class="body-dark">
    <!-- vue -->
    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
    <!-- axios -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script> -->
 
 
-  <div id="background-nav">
-
+  <div class="background-nav  body-nav-dark" >
+ 
   </div>
 
   <!--app start-->
  <div id="app" class="contenitore">
 
 <!--container inizio-->  
- <div id="chat-box">
+ <div id="chat-box" >
 
  <!--sezione profili inizio-->   
- <div id="profiles">
+ <div class="profiles profiles-dark">
    
   <!--top section inizio-->  
  <div class="top-section">
@@ -37,7 +37,7 @@
   <div class="user-profile">
     <div>
   <img src="img/avatar_io.jpg" alt="immagine-utente">
-   <span>Sofia</span>
+   <span class="sofia-dark">Sofia</span>
     </div>
 
     <div>
@@ -73,7 +73,7 @@
 
 
  <!--friend profile start-->
- <div v-for="(contact,cIndex ) in contacts" @click="activeConversation(cIndex)"  class="friend-profile" :class="friendName.includes(...contact.name) ? '' : 'dont-display-contact' "   >
+ <div v-for="(contact,cIndex ) in contacts" @click="activeConversation(cIndex)"  class="friend-profile friend-profile-dark" :class="friendName.includes(...contact.name) ? '' : 'dont-display-contact' "   >
     <div class="image-description">
   <img :src="contact.avatar"  alt="immagine">
     <div>
@@ -100,13 +100,13 @@
 
 
  <!--sezione chats inizio-->  
- <div id="chats">
+ <div class="chats chats-dark">
 
   <!--chat nav start-->
     <div class="chat-nav">
 
             <!--friend profile start-->
- <div class="nav-friend-profile" v-for="(mes, mIndex) in contacts" v-show="mIndex == activeContactIndex" >
+ <div class="nav-friend-profile nav-friend-profile-dark" v-for="(mes, mIndex) in contacts" v-show="mIndex == activeContactIndex" >
     <div class="image-description">
   <img :src="mes.avatar" alt="immagine-amico">
     <div>
@@ -116,6 +116,7 @@
     </div>
 
     <div class="chat-options">
+      <i class="fa-solid fa-circle-half-stroke"></i>
       <i class="fa-solid fa-magnifying-glass"></i>  
       <i class="fa-solid fa-paperclip"></i>
       <i class="fa-solid fa-ellipsis-vertical"></i>       
@@ -128,7 +129,7 @@
 <!--chat nav end-->
 
 <!--chat body start-->
-  <div class="chat-body">
+  <div class="chat-body chat-body-dark">
   <div class="chat-element" v-for="mes in contacts[activeContactIndex].messages">
 
     <div class="conversazione" :class="mes.status == 'sent'? 'sent-by-me': 'sent-by-friend' " >

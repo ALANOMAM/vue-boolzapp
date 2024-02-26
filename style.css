@@ -5,7 +5,7 @@
      /*border:1px black solid;*/
 }
 
-#background-nav{
+.background-nav{
     height: 150px;/*test*/
     background-color: rgba(0, 150, 136, 1);
 }
@@ -31,7 +31,7 @@ body{
 }
 
 /* INIZIO SEZIONE DEI PROFILI (PARTE SINISTRA)*/
-#profiles{
+.profiles{
  width: calc(100% / 3);
 height: 100vh;/*test*/
 overflow-y: auto;
@@ -180,7 +180,7 @@ gap:10px;
 
 /* INIZIO SEZIONE DELLE  CHAT (PARTE DESTRA)*/
 
-#chats{
+.chats{
 padding-right: 10px;
 flex-grow: 1;
 background-color:rgba(241, 241, 241, 1);
@@ -292,3 +292,41 @@ align-self: self-end;
 }
 
 /* FINE SEZIONE DELLE  CHAT (PARTE DESTRA)*/
+
+/*STILIZZAZIONE DARKMODE INIZIO*/
+
+.body-dark{
+  background-color: gray;
+}
+
+.body-nav-dark{
+    background-color:darkgreen; 
+}
+
+.profiles-dark{
+    background-color: rgb(57, 56, 56);
+}
+
+.chats-dark{
+    background-color: rgb(57, 56, 56);
+}
+
+.nav-friend-profile-dark{
+    background-color: rgb(57, 56, 56);
+    color: white;
+    border-left: 2px white solid;
+}
+
+.sofia-dark{
+    color: white;
+}
+
+.friend-profile-dark{
+ background-color:rgba(23, 99, 23, 0.728);
+ color: white;
+}
+
+ /*.chat-body-dark{
+    background-color: darkmagenta;
+}*/
+/*STILIZZAZIONE DARKMODE INIZIO*/
