@@ -10,9 +10,13 @@
     background-color: rgba(0, 150, 136, 1);
 }
 
+.background-body{
+  height: 100vh;
+  background-color: rgba(216, 219, 214, 1)
+}
+
 body{
     font-family: sans-serif;
-    background-color: rgba(216, 219, 214, 1)
 }
 
 .contenitore{
@@ -295,14 +299,13 @@ align-self: self-end;
 
 /*STILIZZAZIONE DARKMODE INIZIO*/
 
-.body-dark{
-  /*background-color: gray;*/
-  background-color: pink;
+.body-body-dark{
+  background-color: gray;
 }
 
 .body-nav-dark{
-   /* background-color:darkgreen; */
-   background-color: red;
+ background-color:darkgreen;
+
 }
 
 .profiles-dark{
