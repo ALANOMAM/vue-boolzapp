@@ -68,8 +68,8 @@
 
   <!--sezione searchbar start-->
   <div class="search-bar">
-    <button type="button" @click="print()"> <i class="fa-solid fa-magnifying-glass"></i> </button>
-    <input type="search" id="searches" placeholder="Cerca o inizia una nuova chat" @keyup.enter="print()" v-model="friendName">
+    <button type="button"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+    <input type="search" id="searches" placeholder="Inserisci il nome di un contatto" @keyup.enter="print()" v-model="friendName">
   </div>
   <!--sezione searchbar end-->
   </div>
@@ -80,7 +80,7 @@
 
 
  <!--friend profile start-->
- <div v-for="(contact,cIndex ) in contacts" @click="activeConversation(cIndex)"  class="friend-profile"    :class="friendName.includes(...contact.name) ? '' : 'dont-display-contact' "   >
+ <div v-for="(contact,cIndex ) in contacts" @click="activeConversation(cIndex)"  class="friend-profile" > <!--:class="friendName.includes(...contact.name) ? '' : 'dont-display-contact' " -->
     <div class="image-description">
   <img :src="contact.avatar"  alt="immagine">
     <div>

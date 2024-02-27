@@ -195,7 +195,7 @@ flex-direction: column;
 
 .chat-nav{
    background-color: pink; 
-   height: calc(100%/10); /*test*/
+   /*height: calc(100%/10); /*test*/
 }
 
 .nav-friend-profile{
